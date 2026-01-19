@@ -8,7 +8,7 @@
 
 ## المطلوب
 
-1. إنشاء دالة بالتوقيع التالي:
+1. المخرج المتوقع:
 
 ```cpp
-void PrintName(string name);
+Your Name is: <name>
