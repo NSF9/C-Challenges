@@ -1,38 +1,43 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-void PrintName(string Name)
+void PrintName(string name)
 {
-	cout << Name << endl; 
-
+    cout << "Your Name is : " << name << endl;
 }
-string ReadName()
+
+string ReadName(string message)
 {
-	string Name; 
-
-	cout << "Please Enter Your Name:\n";
-	cin >> Name;
-
-	return Name;
+    string input;
+    cout << message << endl;
+    getline(cin, input);
+    return input;
 }
-void PrintHeader()
+
+void PrintName(string name)
 {
-	cout << "*************************\n";
-
-	cout << "First Name: " << endl;
-
-	cout << "Last Name: " << endl;
-
-	cout << "Phone Number: " << endl;
+    cout << "Your Name is : " << name << endl;
 }
+
+void PrintHeader(string FirstName, string LastName, string City, string Country)
+{
+    cout << "*************************\n";
+    cout << "First Name: " << FirstName << endl;
+    cout << "Last Name: " << LastName << endl;
+    cout << "City: " << City << endl;
+    cout << "Country: " << Country << endl;
+    cout << "*************************\n";
+}
+
 int main()
 {
-	//cout << "Your Name is: " << ReadName() << endl;
+    string FirstName = ReadName("Enter First Name:");
+    string LastName = ReadName("Enter Last Name:");
+    string City = ReadName("Enter City:");
+    string Country = ReadName("Enter Country:");
 
-	PrintHeader();
+    PrintHeader(FirstName, LastName, City, Country);
 
-	system("Pause");
-	/*cout << "My Name is: ";
-	PrintName("Nawaf");
-   */
+    return 0;
 }
